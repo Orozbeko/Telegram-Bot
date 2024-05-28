@@ -34,7 +34,7 @@ async def process_age(message: types.Message, state: FSMContext):
         await message.answer("Введите число")
         return
     age = int(age)
-    if age < 10 or age > 90:
+    if age < 10 or age > 100:
         await message.answer("Введите возраст от 10 до 100")
         return
     await state.set_state(PizzaSurvey.half)
